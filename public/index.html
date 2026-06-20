@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola de Formação - Tiro Olímpico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #1a365d;
+            --olympic-red: #ef4444;
+            --olympic-yellow: #facc15;
+            --olympic-green: #4ade80;
+        }
+        .bg-primary { background-color: var(--primary-blue); }
+        .text-primary { color: var(--primary-blue); }
+        .accent-red { color: var(--olympic-red); }
+        .accent-yellow { color: var(--olympic-yellow); }
+        .accent-green { color: var(--olympic-green); }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-primary text-white px-6 py-4 flex justify-between items-center shadow-lg">
+        <div class="flex items-center gap-3">
+            <img src="assets/logo.png" alt="Logo" class="h-12 w-12 rounded-full">
+            <span class="font-bold text-xl tracking-tight">TIRO OLÍMPICO</span>
+        </div>
+        <div class="hidden md:flex gap-8 font-medium">
+            <a href="#home" class="hover:text-yellow-400 transition">Início</a>
+            <a href="#sobre" class="hover:text-yellow-400 transition">Sobre</a>
+            <a href="#agendamento" class="hover:text-yellow-400 transition">Agendamento</a>
+            <a href="#contato" class="hover:text-yellow-400 transition">Contato</a>
+        </div>
+        <a href="/login.html" class="bg-white text-primary px-4 py-2 rounded-full text-sm font-bold hover:bg-yellow-400 hover:text-primary transition">Área Admin</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+        <div class="absolute inset-0 bg-primary opacity-90 z-10"></div>
+        <!-- Decorative elements (Olympic colors) -->
+        <div class="absolute top-0 left-0 w-32 h-32 bg-red-500 rounded-full blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-yellow-500 rounded-full blur-3xl opacity-20"></div>
+        <div class="absolute top-1/2 left-1/4 w-48 h-48 bg-green-500 rounded-full blur-3xl opacity-20"></div>
+        
+        <div class="relative z-20 px-4 max-w-4xl">
+            <img src="assets/logo.png" alt="Logo" class="h-32 w-32 mx-auto mb-8 animate-bounce-slow">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Alcance a <span class="text-yellow-400">Precisão</span> Máxima
+            </h1>
+            <p class="text-lg md:text-xl mb-10 text-slate-300">
+                A melhor escola de formação de tiro olímpico. Técnica, disciplina e excelência para atletas de todos os níveis.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#agendamento" class="bg-yellow-400 text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition shadow-xl transform hover:scale-105">
+                    Agendar Treino Agora
+                </a>
+                <a href="#sobre" class="bg-transparent border-2 border-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-primary transition">
+                    Conhecer a Escola
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold text-primary mb-6">Excelência em Cada Disparo</h2>
+                <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                    Nossa escola é dedicada a transformar entusiastas em campeões. Com instrutores certificados e equipamentos de ponta, focamos no desenvolvimento técnico e mental do atleta.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="bg-red-100 p-2 rounded-lg text-red-600"><i class="fas fa-check"></i></div>
+                        <div><strong class="block text-primary">Técnicas Avançadas</strong> Treinamento baseado nas normas internacionais de tiro olímpico.</div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="bg-yellow-100 p-2 rounded-lg text-yellow-600"><i class="fas fa-check"></i></div>
+                        <div><strong class="block text-primary">Equipamento Moderno</strong> Acesso aos melhores armamentos e alvos eletrônicos.</div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="bg-green-100 p-2 rounded-lg text-green-600"><i class="fas fa-check"></i></div>
+                        <div><strong class="block text-primary">Mentalidade Vencedora</strong> Apoio psicológico para controle de ansiedade e foco.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-full h-full border-4 border-yellow-400 rounded-2xl"></div>
+                <img src="https://images.unsplash.com/photo-1595231717317-62631941296a?auto=format&fit=crop&q=80&w=800" alt="Shooting range" class="relative z-10 rounded-2xl shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="agendamento" class="py-24 px-6 bg-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-4">Reserve seu Horário</h2>
+                <p class="text-slate-600">Escolha a data e a hora para o seu treino personalizado.</p>
+            </div>
+            
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl border border-slate-200">
+                <form id="bookingForm" class="grid md:grid-cols-2 gap-6">
+                    <div class="col-span-2 md:col-span-1">
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Nome Completo</label>
+                        <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">E-mail</label>
+                        <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Telefone</label>
+                        <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Data</label>
+                        <input type="date" id="date" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Horário</label>
+                        <select id="time" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                            <option value="">Selecione um horário</option>
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                        </select>
+                    </div>
+                    <div class="col-span-2 mt-4">
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-blue-900 transition transform hover:scale-[1.02] shadow-lg">
+                            Confirmar Agendamento
+                        </button>
+                    </div>
+                </form>
+                <div id="bookingResponse" class="hidden mt-6 p-4 rounded-xl text-center font-medium"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-bold text-primary mb-6">Entre em Contato</h2>
+                <p class="text-slate-600 text-lg mb-8">
+                    Tem dúvidas sobre nossos planos ou quer saber mais sobre a escola? Envie-nos uma mensagem.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 text-slate-700">
+                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center"><i class="fas fa-envelope"></i></div>
+                        <span>contato@tiroolimpico.pt</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-slate-700">
+                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center"><i class="fas fa-phone"></i></div>
+                        <span>+351 210 000 000</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-slate-700">
+                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center"><i class="fas fa-map-marker-alt"></i></div>
+                        <span>Lisboa, Portugal</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Nome</label>
+                        <input type="text" id="contactName" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">E-mail</label>
+                        <input type="email" id="contactEmail" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Mensagem</label>
+                        <textarea id="contactMessage" required rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary outline-none transition"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-blue-900 transition">
+                        Enviar Mensagem
+                    </button>
+                </form>
+                <div id="contactResponse" class="hidden mt-6 p-4 rounded-xl text-center font-medium"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12 px-6 text-center">
+        <div class="max-w-6xl mx-auto">
+            <img src="assets/logo.png" alt="Logo" class="h-16 w-16 mx-auto mb-6 rounded-full">
+            <p class="mb-6 text-slate-400">&copy; 2026 Escola de Formação de Tiro Olímpico. Todos os direitos reservados.</p>
+            <div class="flex justify-center gap-6 text-2xl">
+                <a href="#" class="hover:text-yellow-400 transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-yellow-400 transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-yellow-400 transition"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Booking Form Submission
+        document.getElementById('bookingForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const responseDiv = document.getElementById('bookingResponse');
+            const data = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value
+            };
+
+            try {
+                const res = await fetch('/api/bookings', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (res.ok) {
+                    responseDiv.textContent = 'Agendamento realizado com sucesso! Esperamos por você.';
+                    responseDiv.className = 'mt-6 p-4 rounded-xl text-center font-medium bg-green-100 text-green-700';
+                    document.getElementById('bookingForm').reset();
+                } else {
+                    throw new Error('Erro ao agendar');
+                }
+            } catch (err) {
+                responseDiv.textContent = 'Ocorreu um erro. Por favor, tente novamente.';
+                responseDiv.className = 'mt-6 p-4 rounded-xl text-center font-medium bg-red-100 text-red-700';
+            }
+            responseDiv.classList.remove('hidden');
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const responseDiv = document.getElementById('contactResponse');
+            const data = {
+                name: document.getElementById('contactName').value,
+                email: document.getElementById('contactEmail').value,
+                message: document.getElementById('contactMessage').value
+            };
+
+            try {
+                const res = await fetch('/api/contacts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (res.ok) {
+                    responseDiv.textContent = 'Mensagem enviada com sucesso! Responderemos em breve.';
+                    responseDiv.className = 'mt-6 p-4 rounded-xl text-center font-medium bg-green-100 text-green-700';
+                    document.getElementById('contactForm').reset();
+                } else {
+                    throw new Error('Erro ao enviar');
+                }
+            } catch (err) {
+                responseDiv.textContent = 'Ocorreu um erro. Por favor, tente novamente.';
+                responseDiv.className = 'mt-6 p-4 rounded-xl text-center font-medium bg-red-100 text-red-700';
+            }
+            responseDiv.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
